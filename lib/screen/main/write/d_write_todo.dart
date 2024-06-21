@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:nav/dialog/dialog.dart';
 
 import '../../../common/data/memory/vo_todo.dart';
+import '../../../common/widget/constant_widget.dart';
 import '../../../common/widget/w_rounded_container.dart';
 
 class WriteTodoDialog extends DialogWidget<WriteTodoResult> {
@@ -43,14 +44,14 @@ class _WriteTodoDialogState extends DialogState<WriteTodoDialog> with AfterLayou
           child: Column(
             children: [
               Row(
-                  vo_todo   children: [
+                children: [
                   '할일을 작성해주세요.'.text.size(18).bold.make(),
-                  emptyExpanded,
+                  spacer,
                   _selectedDate.formattedDate.text.make(),
                   IconButton(onPressed: _selectDate, icon: const Icon(Icons.calendar_month))
                 ],
               ),
-              height(20),
+              height20,
               Row(
                 children: [
                   Expanded(
